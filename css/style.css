@@ -1,0 +1,894 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    /*盒子阴影*/
+    height: 57px;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, .6);
+}
+.header .inner{
+    /*版心*/
+    width: 1000px;
+    height: 57px;
+    margin: 0 auto;
+}
+.header .inner .logo{
+    /*将h1区域居中*/
+    padding-top: 13px;
+    float: left;
+    margin-right: 16px;
+}
+.header .inner .logo h1{
+    width: 120px;
+    /*用padding顶出内容，用于隐藏h1内容*/
+    height: 0px;
+    padding-top: 30px;
+    overflow: hidden;
+    background: url(../image/header-inner.png);
+}
+.header .inner .nav{
+    float: left;
+}
+.header .inner .nav ul li{
+    float: left;
+    list-style: none;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+.header .inner .nav ul li a{
+    display: block;
+    height: 53px;
+    line-height: 53px;
+    padding: 0 14px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #333;
+}
+.header .inner .nav ul li a i{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border:5px solid transparent;
+    border-top: 5px solid #333;
+    border-bottom: none;
+    vertical-align:middle;
+    transition: transform 0.5s;
+}
+.header .inner .nav ul li:hover a i{
+    transform: rotate(180deg);
+}
+.header .inner .nav ul li.cur{
+    background: #ff9d00;
+}
+.header .inner .nav ul li.cur a{
+    color: white;
+}
+.header .inner .nav ul li.top_bk:hover{
+    border-top: 2px solid #ff9d00;
+    border-left: 1px solid #ccc; 
+    border-right: 1px solid #ccc; 
+}
+.header .inner .nav ul li.top_bk:hover a{
+    color: #ff9d00;
+}
+.header .inner .nav ul li.btn_bk:hover{
+    border-bottom: 2px solid #ff9d00;
+}
+.header .inner .nav ul li.btn_bk:hover a{
+    color: #ff9d00;
+}
+.header .inner .login_box{
+    float: right;
+    width: 182px;
+    height: 57px;
+    display: flex;
+    align-items: center;
+}
+.header .inner .login_box .circle{
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    margin-right: 9px;
+    background: url(../image/header-login.png);
+    background-size: 200px;
+    
+}
+.header .inner .login_box .weibo{
+    background-position: 0px -50px;
+}
+.header .inner .login_box .weibo:hover{
+    background-position: 0 -80px;
+}
+.header .inner .login_box .qq{
+    background-position: -30px -50px;
+}
+.header .inner .login_box .qq:hover{
+    background-position: -30px -80px;
+}
+.header .inner .login_box .wechart{
+    background-position: 0px -165px;
+}
+.header .inner .login_box .wechart:hover{
+    background-position: -30px -165px;
+}
+.header .inner .login_box .tt{
+    text-decoration: none;
+    color: #ff9d00;
+    font-size: 16px;
+}
+.header .inner .login_box .tt:hover{
+    text-decoration:underline;
+}
+.header .inner .login_box span{
+    margin: 0 4px;
+    color: #c9c9c9;
+}
+
+.banner{
+    height: 421px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.banner .bc ul li{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.banner .bc ul li img{
+    width: 100%;
+    min-width: 1300px;
+}
+
+.banner .nav{
+    position:absolute;
+    right: 30px;
+    top: 30px;
+    width: 110px;
+    height: 320px;
+}
+.banner .nav ul{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+.banner .nav ul li{
+    height: 62px;
+    width: 110px;
+    border: 2px solid transparent;
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+.banner .nav ul li img{
+    width: 100%;
+    height: 100%;
+}
+.banner .nav ul li.cur{
+    border: 2px solid #ff9d00;
+}
+.banner .inner{
+    width: 1000px;
+    height: 200px;
+    position: relative;
+    margin: 0 auto;
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+    top: 15px;
+}
+.banner .inner .number span:first-child{
+    font-size: 30px;
+}
+.banner .contain{
+    position: absolute;
+    bottom: 55px;
+    left: 50%;
+    margin-left: -269px;
+    width: 538px;
+    height: 88px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+.banner .contain .top{
+    width: 100%;
+    height: 16px;
+    display: flex;
+    align-items: center;
+}
+.banner .contain .top i{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url(../image/header-login.png);
+    background-size: 200px;
+    background-position: -60px -110px;
+    margin-right: 2px;
+    cursor: pointer;
+}
+.banner .contain .top span{
+    color: white;
+    font-size: 16px;
+    margin-right: 12px;
+}
+.banner .contain .top i.cur{
+    background-position: -60px -140px;
+}
+.banner .contain .bottom{
+    margin-top: 13px;
+}
+.banner .contain .bottom .tt_input{
+    padding-left: 15px;
+    width: 464px;
+    height: 36px;
+    background: white;
+    border-radius: 5px;
+    float: left;
+}
+.banner .contain .bottom .tt_input input{
+    width: 444px;
+    height: 36px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    color: #333;
+}
+.banner .contain .bottom .search{
+    position: relative;
+    float: left;
+    width:36px;
+    height: 36px;
+    border-radius: 5px;
+    margin-left: 3px;
+    background-color: #ff9d00;
+    cursor: pointer;
+}
+.banner .contain .bottom .search i{
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: url(../image/header-login.png);
+    background-position: 0px -110px;
+    background-size: 200px;
+}
+.banner .contain .bottom .search:hover{
+    background-color: #ff8a00;
+}
+.container{
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.container .nav{
+    width: 100%;
+    margin-bottom: 19px;
+    display: flex;
+    justify-content: space-around;
+}
+.container .nav a{
+    text-decoration: none;
+}
+.container .nav a>div{
+    width: 128px;
+    border: .5px solid #e5e5e5;
+    user-select: none;
+    padding:8px;
+    border-radius: 5px;
+}
+.container .nav a>div:hover{
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+}
+.container .nav a>div .title{
+    height: 22px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    color: #333;
+}
+.container .nav a>div .subtitle{
+    height: 16px;
+    padding-top: 1px;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #9d9d9d;
+}
+.container .nav a .sales{
+    background: url(../image/container-nav.png) no-repeat;
+    background-position: 64px -664px;
+    background-size: 106px;
+}
+.container .nav a .group{
+    background: url(../image/container-nav.png) no-repeat;
+    background-position: 64px -24px;
+    background-size: 106px;
+}
+.container .nav a .localdeals{
+    background: url(../image/container-nav.png) no-repeat;
+    background-position: 64px -130px;
+    background-size: 106px;
+}
+.container .nav a .flight{
+    background: url(../image/container-nav.png) no-repeat;
+    background-position: 64px -450px;
+    background-size: 106px;
+}
+.container .nav a .hotel{
+    background: url(../image/container-nav.png) no-repeat;
+    background-position: 64px -557px;
+    background-size: 106px;
+}
+.container .nav a .visa{
+    background: url(../image/container-nav.png) no-repeat;
+    background-position: 64px -342px;
+    background-size: 106px;
+}
+.container .nav a .ship{
+    background: url(../image/container-nav.png) no-repeat;
+    background-position: 64px -236px;
+    background-size: 106px;
+}
+.container .aside{
+    float: left;
+    width: 260px;
+}
+.container .aside>div{
+    margin-bottom: 30px;
+}
+.container .aside .safety{
+    width: 100%;
+}
+.container .aside .safety img{
+    width: 220px;
+    height: 31px;
+}
+.container .aside .traveller{
+    width: 100%;
+}
+.container .aside .traveller .hd{
+    width: 100%;
+    height:35px;
+    line-height: 35px;
+}
+.container .aside .traveller .hd a{
+    text-decoration: none;
+}
+.container .aside .traveller .hd h2{
+    float: left;
+    font-size: 20px;
+    font-weight: normal;
+}
+.container .aside .traveller .hd h2 a{
+    color: #333;
+}
+.container .aside .traveller .hd>a{
+    float: right;
+    color: #999;
+    font-size: 12px;
+}
+.container .aside .traveller .hd>a:hover{
+    text-decoration: underline;
+}
+.container .aside .traveller .bd{
+    width: 100%;
+    height: 246px;
+    overflow: hidden;
+    position: relative;
+}
+.container .aside .traveller .bd ul{
+    width: 1300px;
+    height: 100%;
+    position: relative;
+    transition: all 0.5s;
+}
+.container .aside .traveller .bd ul li{
+    list-style: none;
+    float: left;
+    width: 260px;
+}
+.container .aside .traveller .bd ul li img{
+    width: 260px;
+    height: 140px;
+}
+.container .aside .traveller .bd ul li h3{
+    font-weight: normal;
+    line-height: 26px;
+}
+.container .aside .traveller .bd ul li h3 a{
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+.container .aside .traveller .bd ul li h3 a:hover{
+    text-decoration: underline;
+    color: #ff9d00;
+}
+.container .aside .traveller .bd ul li p{
+    color:#666 ;
+    line-height: 20px;
+    font-size: 14px;
+}
+.container .aside .traveller .bd ol{
+    position: absolute;
+    width: 120px;
+    height: 10px;
+    top: 119px;
+    left: 134px;
+    list-style: none;
+}
+.container .aside .traveller .bd ol li{
+    float: left;
+    width: 20px;
+    height: 10px;
+    border-radius: 10px;
+    background: white;
+    margin-right: 4px;
+    cursor: pointer;
+}
+.container .aside .traveller .bd ol li:hover{
+    background:#ff9d00;
+}
+.container .aside .traveller .bd ol li.cur{
+    background: #ff9d00;
+}
+.container .aside .gonglue{
+    width: 100%;
+}
+.container .aside .gonglue .hd{
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+}
+.container .aside .gonglue .hd h2{
+    float: left;
+    font-size: 20px;
+    font-weight: normal;
+}
+.container .aside .gonglue .hd a{
+    text-decoration: none;
+    color: #333;
+}
+.container .aside .gonglue .hd>a:hover{
+    text-decoration: underline;
+}
+.container .aside .gonglue .hd>a{
+    float: right;
+    color: #999;
+    font-size: 12px;
+}
+.container .aside .gonglue .bd{
+    width: 100%;
+}
+.container .aside .gonglue .bd a img{
+    width: 100%;
+    height: 139px;
+}
+.container .aside .gonglue .bd a:last-child{
+    text-decoration: none;
+}
+.container .aside .gonglue .bd a:last-child:hover{
+    text-decoration: underline;
+    color: #ff9d00;
+}
+.container .aside .gonglue .bd a:last-child:hover p{
+    color: #ff9d00;
+}
+.container .aside .gonglue .bd a:last-child p{
+    color: #333;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 16px;
+}
+.container .aside .activity{
+    width: 100%;
+}
+.container .aside .activity .hd{
+    width: 100%;
+    line-height: 35px;
+    height: 35px;
+}
+.container .aside .activity .hd h2{
+    float:left;
+    font-size: 20px;
+    font-weight: normal;
+}
+.container .aside .activity .hd h2 a{
+    color: #333;
+    text-decoration: none;
+}
+.container .aside .activity .hd>a{
+    float: right;
+    color: #999;
+    text-decoration: none;
+    font-size: 12px;
+}
+.container .aside .activity .hd>a:hover{
+    text-decoration: underline;
+}
+.container .aside .activity .bd{
+    width: 100%;
+}
+.container .aside .activity .bd a img{
+    width: 260px;
+    height: 178px;
+}
+.container .aside .activity .bd h3{
+    height: 26px;
+    line-height: 26px;
+    color: #333;
+    font-size: 16px;
+    font-weight: normal;
+}
+.container .aside .activity .bd h3 a{
+    text-decoration: none;
+    color: #ff9d00;
+}
+.container .aside .activity .bd h3 a:hover{
+    text-decoration: underline;
+}
+.container .aside .activity .bd p{
+    height: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #666;
+    font-size: 14px;
+}
+.container .aside .unknown{
+    width: 100%;
+}
+.container .aside .unknown .hd{
+    height: 35px;
+    width: 100%;
+}
+.container .aside .unknown .hd h2{
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    font-weight: normal;
+    font-size: 20px;
+}
+.container .aside .unknown .hd h2>a{
+    text-decoration: none;
+    color: #333333;
+}
+.container .aside .unknown .hd>a{
+    float: right;
+    color: #999;
+    font-size: 12px;
+    line-height: 35px;
+    text-decoration: none;
+}
+.container .aside .unknown .hd>a:hover{
+    text-decoration: underline;
+}
+.container .aside .unknown .bd a img{
+    width: 260px;
+    height: 170px;
+}
+.container .aside .hr{
+    width: 100%;
+}
+.container .aside .hr .hd{
+    width: 100%;
+    height: 35px;
+}
+.container .aside .hr .hd h2{
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    font-size: 20px;
+    font-weight: normal;
+}
+.container .aside .hr .hd h2 a{
+    text-decoration: none;
+    color: #333;
+}
+.container .aside .hr .hd>a{
+    float: right;
+    color: #999;
+    line-height: 35px;
+    font-size: 12px;
+    text-decoration: none;
+}
+.container .aside .hr .hd>a:hover{
+    text-decoration: underline;
+}
+.container .aside .hr .bd a img{
+    width: 260px;
+    height: 146px;
+}
+.container .aside .news{
+    width: 100%;
+} 
+.container .aside .news .hd{
+    height: 35px;
+    line-height: 35px;
+}
+.container .aside .news .hd h2{
+    height: 35px;
+    line-height: 35px;
+    font-size: 20px;
+}
+.container .aside .news .hd h2>a{
+    text-decoration: none;
+    color: #333;
+    font-weight: normal;
+}
+.container .aside .news .bd{
+    width: 100%;
+}
+.container .aside .news .bd li{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    list-style: none;
+    font-size: 12px;
+    color: #666;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.container .aside .news .bd li a{
+    text-decoration: none;
+    color: #666;
+}
+.container .aside .news .bd li a:hover{
+    text-decoration: underline;
+}
+.container .wrapper{
+    float: right;
+    width: 700px;
+}
+.container .wrapper .nav{
+    width: 100%;
+    height: 36px;
+}
+.container .wrapper .nav ul{
+    width: 100%;
+    height: 44px;
+}
+.container .wrapper .nav ul li{
+    float: left;
+    height: 36px;
+    line-height: 36px;
+    list-style: none;
+    padding: 0 15px;
+}
+.container .wrapper .nav ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+}
+.container .wrapper .nav ul li.cur{
+    padding-bottom: 4px;
+    border-bottom: 3px solid #ff9d00;
+}
+.container .wrapper .nav ul li.cur a{
+    color: #ff9d00;
+}
+.container .wrapper .nav ul li.cur span{
+    width: 40px;
+    height: 20px;
+    padding: 0 8px;
+    color: #666;
+    cursor: pointer;
+}
+.container .wrapper .nav ul li.cur span:hover{
+    background: #ff9d00;
+    color: white;
+}
+.container .wrapper .nav ul li.cur span:hover i{
+    background-position: 0px -140px;
+}
+.container .wrapper .nav ul li.cur span i{
+    display: inline-block;
+    width: 11px;
+    height: 8px;
+    background: url(../image/wrapper-nav-1.png) no-repeat;
+    background-position: 0px -130px;
+    box-sizing: border-box;
+    position: relative;
+    top: -2px;
+    left: -2px;
+}
+.container .wrapper .nav ul li:hover a:last-child{
+    color: #ff9d00;
+}
+.container .wrapper .nav .write{
+    width: 176px;
+    height: 36px;
+    float: right;
+    line-height: 36px;
+    background:  #ff9d00;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+} 
+.container .wrapper .nav .write a{
+    color:white;
+}
+.container .wrapper .nav .write:hover{
+    background:#ff8a00;
+}
+.container .wrapper .nav .write a i{
+    display: inline-block;
+    width: 18px;
+    height: 17px;
+    background: url(../image/wrapper-nav-1.png) no-repeat;
+    background-position: 0px 0px;
+    position: relative;
+    top: 3px;
+    left: 3px;
+}
+.container .wrapper .block{
+    width: 100%;
+}
+.container .block .inner-box{
+    width: 100%;
+    height: 150px;
+    padding: 15px 0px;
+}
+.container .block .inner-box:hover{
+    background: #f8f8f8;
+}
+.container .block .inner-box .img-box{
+    width: 220px;
+    height: 150px;
+    float: left;
+}
+.container .block .inner-box .img-box a img{
+    width: 220px;
+    height: 150px;
+}
+.container .block .inner-box .txt-box{
+    float: right;
+    width: 455px;
+    height: 150px;
+}
+.container .block .inner-box .txt-box .hd h2{
+    width: 100%;
+    height: 26px;
+    line-height: 26px;
+    font-size: 18px;
+}
+.container .block .inner-box .txt-box .hd h2 a{
+    display: inline-block;
+    width: 455px;
+    color: #333;
+    text-decoration: none;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    
+}
+.container .block .inner-box .txt-box .hd:hover h2 a{
+    text-decoration: underline;
+    color: #ff9d00;
+}
+.container .block .inner-box .txt-box .content{
+    width: 100%;
+    height: 60px;
+}
+.container .block .inner-box .txt-box .content a{
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 20px;
+}
+.container .block .inner-box .txt-box .ft{
+    margin-top: 36px;
+    width: 100%;
+    height: 33px;
+}
+.container .block .inner-box .txt-box .ft span{
+    display: inline-block;
+    height: 33px;
+    line-height: 33px;
+    font-size: 12px;
+    color: #999;
+}
+.container .block .inner-box .txt-box .ft span a{
+    text-decoration: none;
+    color: #999;
+}
+.container .block .inner-box .txt-box .ft span a:hover{
+    text-decoration: underline;
+    color: #ff9d00;
+}
+.container .block .inner-box .txt-box .ft span.place i{
+    background: url(../image/wrapper-nav-1.png) no-repeat;
+    background-position: 0 -50px;
+    display: inline-block;
+    width: 14px;
+    height: 16px;
+    position: relative;
+    top: 2px;
+}
+.container .block .inner-box .txt-box .ft span.name i{
+    background: url(../image/inner-box-ft-name-1.jpeg) no-repeat;
+    background-position: 0 0px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    position: relative;
+    top: 2px;
+}
+.container .block .inner-box .txt-box .ft span.looks i{
+    background: url(../image/wrapper-nav-1.png) no-repeat;
+    background-position: -30px -50px;
+    display: inline-block;
+    width: 18px;
+    height: 14px;
+    position: relative;
+    top: 2px;
+}
+.container .block .inner-box .txt-box .ft span.ding{
+    float: right;
+}
+.container .block .inner-box .txt-box .ft span.ding i{
+    background: url(../image/wrapper-nav-1.png) no-repeat;
+    background-position: -60px 0px;
+    display: inline-block;
+    width: 38px;
+    height: 33px;
+}
+.container .block .inner-box .txt-box .ft span.ding span{
+    position: relative;
+    top: -12px;
+    color: #ff9d00;
+}
+.footer{
+    width: 100%;
+    background: #3c3c3c;
+}
+.footer .inner{
+    width: 1050px;
+    margin: 0 auto;
+    padding: 35px 8px;
+    overflow: hidden;
+}
+.footer .inner .info dl{
+    color: #c2c2c2;
+    margin-right: 68px;
+    float: left;
+}
+.footer .inner .info dl a{
+    color: #c2c2c2;
+    text-decoration: none;
+}
+.footer .inner .info dl dt{
+    font-size: 14px;
+    line-height: 30px;
+}
+.footer .inner .info dl dd{
+    font-size: 12px;
+    line-height: 20px;
+}
+.footer .inner .info dl span{
+    color:#ff9d00;
+}
+.footer .inner .info ul{
+    padding-top: 30px;
+    list-style: none;
+    float: left;
+}
+.footer .inner .info ul li{
+    float: left;
+    margin-right: 40px;
+    font-size: 12px;
+    color: #c2c2c2;
+    text-align: center;
+}
+
+
